@@ -1,1351 +1,309 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alireza Mahdavishirkharkolaei | Legal Professional & Researcher</title>
-  <meta name="description" content="Alireza Mahdavishirkharkolaei – Legal Professional, LLM Researcher specializing in International Trade Law, Tax Havens, and EU Legal Frameworks. Based in Nicosia, Cyprus." />
-  <meta name="keywords" content="Alireza Mahdavishirkharkolaei, legal researcher, international trade law, tax havens, LLM Cyprus, Cyprus International University, lawyer" />
-  <meta name="author" content="Alireza Mahdavishirkharkolaei" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Alireza Mahdavishirkharkolaei | Legal Professional & Researcher" />
-  <meta property="og:description" content="LLM Researcher specializing in International Trade Law and Tax Havens. Legal Advisor – Northern Cyprus." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://alirezamahdavishirkharkolaei.github.io" />
-  <meta property="og:image" content="https://via.placeholder.com/1200x630/001f3f/c5a14d?text=Alireza+Mahdavishirkharkolaei" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Alireza Mahdavishirkharkolaei | Legal Professional" />
-  <meta name="twitter:description" content="LLM Researcher | International Trade Law | Tax Havens | EU Legal Frameworks" />
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://alirezamahdavishirkharkolaei.github.io" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: { DEFAULT: '#001f3f', light: '#002a54', dark: '#001428', mid: '#003366' },
-            gold:  { DEFAULT: '#c5a14d', light: '#d4b468', dark: '#a8883a', pale: '#f0e4c0' },
-          },
-          fontFamily: {
-            display: ['Cormorant Garamond', 'Georgia', 'serif'],
-            body:    ['Jost', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Jost', sans-serif;
-      background: #f8f7f4;
-      color: #1a1a2e;
-      overflow-x: hidden;
-    }
-
-    /* ── Scrollbar ── */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #001f3f; }
-    ::-webkit-scrollbar-thumb { background: #c5a14d; border-radius: 3px; }
-
-    /* ── Typography ── */
-    .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
-
-    /* ── Gold rule ── */
-    .gold-rule {
-      display: inline-block;
-      width: 60px; height: 2px;
-      background: linear-gradient(90deg, #c5a14d, #d4b468);
-    }
-
-    /* ── Navbar ── */
-    #navbar {
-      transition: all 0.4s ease;
-      backdrop-filter: blur(0px);
-    }
-    #navbar.scrolled {
-      background: rgba(0,31,63,0.97) !important;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 4px 30px rgba(0,0,0,0.4);
-    }
-    .nav-link {
-      position: relative;
-      color: rgba(255,255,255,0.8);
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -4px; left: 0;
-      width: 0; height: 1px;
-      background: #c5a14d;
-      transition: width 0.3s ease;
-    }
-    .nav-link:hover { color: #c5a14d; }
-    .nav-link:hover::after { width: 100%; }
-
-    /* ── Hero ── */
-    #hero {
-      background: linear-gradient(135deg, #001428 0%, #001f3f 50%, #002a54 100%);
-      position: relative;
-      overflow: hidden;
-    }
-    #hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background-image:
-        radial-gradient(circle at 20% 50%, rgba(197,161,77,0.06) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(197,161,77,0.04) 0%, transparent 40%);
-    }
-    .hero-grid-bg {
-      position: absolute; inset: 0;
-      background-image:
-        linear-gradient(rgba(197,161,77,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(197,161,77,0.04) 1px, transparent 1px);
-      background-size: 60px 60px;
-    }
-    .hero-photo-ring {
-      position: relative;
-      display: inline-block;
-    }
-    .hero-photo-ring::before {
-      content: '';
-      position: absolute;
-      inset: -8px;
-      border: 2px solid rgba(197,161,77,0.4);
-      border-radius: 50%;
-      animation: ringPulse 3s ease-in-out infinite;
-    }
-    .hero-photo-ring::after {
-      content: '';
-      position: absolute;
-      inset: -18px;
-      border: 1px solid rgba(197,161,77,0.15);
-      border-radius: 50%;
-    }
-    @keyframes ringPulse {
-      0%, 100% { transform: scale(1); opacity: 0.4; }
-      50%       { transform: scale(1.03); opacity: 0.7; }
-    }
-    .hero-photo {
-      width: 220px; height: 220px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #c5a14d;
-      display: block;
-    }
-
-    /* ── Fade-in animations ── */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .fade-left {
-      opacity: 0;
-      transform: translateX(-30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .fade-left.visible { opacity: 1; transform: translateX(0); }
-
-    /* ── Section titles ── */
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 600;
-      color: #001f3f;
-      line-height: 1.1;
-    }
-    .section-subtitle {
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #c5a14d;
-      font-weight: 600;
-    }
-
-    /* ── Cards ── */
-    .card {
-      background: #fff;
-      border: 1px solid #e8e3d8;
-      border-radius: 4px;
-      transition: all 0.35s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 3px; height: 0;
-      background: #c5a14d;
-      transition: height 0.35s ease;
-    }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,31,63,0.12); }
-    .card:hover::before { height: 100%; }
-
-    /* ── Publication cards ── */
-    .pub-card {
-      background: #fff;
-      border: 1px solid #e8e3d8;
-      border-radius: 4px;
-      padding: 2rem;
-      cursor: pointer;
-      transition: all 0.35s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .pub-card::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 0; height: 3px;
-      background: linear-gradient(90deg, #c5a14d, #d4b468);
-      transition: width 0.4s ease;
-    }
-    .pub-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(0,31,63,0.15); }
-    .pub-card:hover::after { width: 100%; }
-
-    /* ── Modal ── */
-    #modal-overlay {
-      position: fixed; inset: 0; z-index: 9999;
-      background: rgba(0,20,40,0.85);
-      backdrop-filter: blur(6px);
-      display: flex; align-items: center; justify-content: center;
-      padding: 1rem;
-      opacity: 0; pointer-events: none;
-      transition: opacity 0.35s ease;
-    }
-    #modal-overlay.open { opacity: 1; pointer-events: all; }
-    #modal-box {
-      background: #fff;
-      border-radius: 4px;
-      max-width: 680px; width: 100%;
-      max-height: 90vh; overflow-y: auto;
-      transform: scale(0.92) translateY(20px);
-      transition: transform 0.35s ease;
-      border-top: 4px solid #c5a14d;
-      position: relative;
-    }
-    #modal-overlay.open #modal-box { transform: scale(1) translateY(0); }
-
-    /* ── Skills pills ── */
-    .skill-pill {
-      display: inline-block;
-      padding: 0.35rem 0.85rem;
-      border: 1px solid #c5a14d;
-      border-radius: 2px;
-      font-size: 0.78rem;
-      color: #001f3f;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-      background: rgba(197,161,77,0.06);
-      transition: all 0.25s;
-    }
-    .skill-pill:hover { background: #c5a14d; color: #fff; }
-
-    /* ── Timeline ── */
-    .timeline-item { position: relative; padding-left: 2rem; }
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 8px;
-      width: 10px; height: 10px;
-      border-radius: 50%;
-      background: #c5a14d;
-      border: 2px solid #fff;
-      box-shadow: 0 0 0 3px rgba(197,161,77,0.3);
-    }
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      left: 4px; top: 22px;
-      width: 1px;
-      height: calc(100% - 10px);
-      background: linear-gradient(to bottom, rgba(197,161,77,0.5), transparent);
-    }
-    .timeline-item:last-child::after { display: none; }
-
-    /* ── Lang bars ── */
-    .lang-bar-bg { background: #e8e3d8; border-radius: 2px; height: 4px; }
-    .lang-bar-fill {
-      height: 4px; border-radius: 2px;
-      background: linear-gradient(90deg, #c5a14d, #d4b468);
-      transition: width 1.2s ease;
-      width: 0;
-    }
-
-    /* ── Buttons ── */
-    .btn-gold {
-      display: inline-block;
-      background: linear-gradient(135deg, #c5a14d, #d4b468);
-      color: #001f3f;
-      font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.75rem 2rem;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-      border: none; cursor: pointer;
-    }
-    .btn-gold:hover {
-      background: linear-gradient(135deg, #d4b468, #c5a14d);
-      box-shadow: 0 8px 25px rgba(197,161,77,0.4);
-      transform: translateY(-2px);
-    }
-    .btn-outline-gold {
-      display: inline-block;
-      border: 1px solid #c5a14d;
-      color: #c5a14d;
-      font-weight: 500;
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.6rem 1.5rem;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      background: transparent;
-    }
-    .btn-outline-gold:hover { background: #c5a14d; color: #001f3f; }
-
-    /* ── Contact form ── */
-    .contact-input {
-      width: 100%;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(197,161,77,0.3);
-      border-radius: 2px;
-      padding: 0.85rem 1rem;
-      color: #fff;
-      font-family: 'Jost', sans-serif;
-      font-size: 0.9rem;
-      transition: border-color 0.3s;
-      outline: none;
-    }
-    .contact-input::placeholder { color: rgba(255,255,255,0.35); }
-    .contact-input:focus { border-color: #c5a14d; background: rgba(255,255,255,0.09); }
-
-    /* ── Footer ── */
-    footer { background: #001428; }
-
-    /* ── Responsive nav ── */
-    #mobile-menu { display: none; }
-    #mobile-menu.open { display: block; }
-
-    @media (max-width: 768px) {
-      .hero-photo { width: 160px; height: 160px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alireza Mahdavishirkharkolaei · Legal Researcher, International Trade Law &amp; Legal Technology</title>
+<meta name="description" content="Alireza Mahdavishirkharkolaei, LL.M.: legal researcher in international trade law, WTO law, tax havens and fiscal transparency, and developer of open-source legal-tech tools.">
+<meta name="author" content="Alireza Mahdavishirkharkolaei">
+<link rel="canonical" href="https://alirezamahdavishirkharkolaei.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Alireza Mahdavishirkharkolaei · Legal Researcher">
+<meta property="og:description" content="International trade law, tax havens and legal technology. Research, publications and open-source legal-tech tools.">
+<meta property="og:url" content="https://alirezamahdavishirkharkolaei.github.io/">
+<meta property="og:image" content="https://alirezamahdavishirkharkolaei.github.io/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#001f3f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23001f3f'/><text x='16' y='22' font-family='Georgia,serif' font-size='17' text-anchor='middle' fill='%23c5a14d'>AM</text></svg>">
+<link rel="apple-touch-icon" href="assets/avatar-256.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alireza Mahdavishirkharkolaei",
+  "url": "https://alirezamahdavishirkharkolaei.github.io/",
+  "image": "https://alirezamahdavishirkharkolaei.github.io/assets/alireza-mahdavishirkharkolaei.jpg",
+  "jobTitle": "Legal Researcher",
+  "email": "mailto:lawyer.alirezamahdavi@gmail.com",
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "Cyprus International University"},
+    {"@type": "CollegeOrUniversity", "name": "Islamic Azad University of Babol"}
+  ],
+  "knowsAbout": ["International trade law", "WTO law", "GATS", "Tax havens", "Fiscal transparency", "EU law", "Legal technology", "Rules as code"],
+  "sameAs": [
+    "https://www.researchgate.net/profile/Alireza-Mahdavishirkharkolaei",
+    "https://github.com/AlirezaMahdavishirkharkolaei"
+  ]
+}
+</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<!-- ═══════════════════════════════════════════════
-     NAVBAR
-═══════════════════════════════════════════════ -->
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-navy transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-
-    <!-- Logo -->
-    <a href="#hero" class="flex items-center gap-3 text-white no-underline group">
-      <div class="w-9 h-9 flex items-center justify-center border border-gold rounded-sm group-hover:bg-gold transition-colors duration-300">
-        <i class="fa-solid fa-scale-balanced text-gold text-sm group-hover:text-navy transition-colors duration-300"></i>
-      </div>
-      <div>
-        <div class="font-display font-semibold text-base leading-tight tracking-wide">Alireza Mahdavi</div>
-        <div class="text-xs text-gold tracking-widest uppercase font-light opacity-80">Legal Researcher</div>
-      </div>
-    </a>
-
-    <!-- Desktop links -->
-    <div class="hidden md:flex items-center gap-8">
-      <a href="#about"        class="nav-link">About</a>
-      <a href="#education"    class="nav-link">Education</a>
-      <a href="#experience"   class="nav-link">Experience</a>
-      <a href="#publications" class="nav-link">Publications</a>
-      <a href="#skills"       class="nav-link">Skills</a>
-      <a href="#contact"      class="nav-link">Contact</a>
-    </div>
-
-    <div class="hidden md:block">
-      <a href="#contact" class="btn-gold text-sm py-2 px-5">Get in Touch</a>
-    </div>
-
-    <!-- Mobile toggle -->
-    <button id="mobile-toggle" class="md:hidden text-white text-xl focus:outline-none">
-      <i id="toggle-icon" class="fa-solid fa-bars"></i>
-    </button>
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Home"><span class="mono">AM</span><span class="brand-text">Alireza Mahdavishirkharkolaei<small>Legal Researcher</small></span></a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#publications">Publications</a>
+      <a href="#education">Education</a><a href="#experience">Experience</a><a href="#skills">Skills</a>
+      <a href="#contact" class="btn-gold small">Contact</a>
+    </nav>
   </div>
+</header>
 
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="md:hidden bg-navy-dark border-t border-gold border-opacity-20 px-6 py-4">
-    <div class="flex flex-col gap-4">
-      <a href="#about"        class="nav-link py-1" onclick="closeMobileMenu()">About</a>
-      <a href="#education"    class="nav-link py-1" onclick="closeMobileMenu()">Education</a>
-      <a href="#experience"   class="nav-link py-1" onclick="closeMobileMenu()">Experience</a>
-      <a href="#publications" class="nav-link py-1" onclick="closeMobileMenu()">Publications</a>
-      <a href="#skills"       class="nav-link py-1" onclick="closeMobileMenu()">Skills</a>
-      <a href="#contact"      class="nav-link py-1" onclick="closeMobileMenu()">Contact</a>
-      <a href="#contact" class="btn-gold text-center mt-2" onclick="closeMobileMenu()">Get in Touch</a>
-    </div>
-  </div>
-</nav>
-
-
-<!-- ═══════════════════════════════════════════════
-     HERO
-═══════════════════════════════════════════════ -->
-<section id="hero" class="min-h-screen flex items-center pt-24 pb-20 relative">
-  <div class="hero-grid-bg"></div>
-  <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
-    <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-
-      <!-- Text -->
-      <div class="flex-1 text-white text-center md:text-left">
-        <p class="section-subtitle mb-4 opacity-0" style="animation: fadeInUp 0.7s 0.2s forwards;">Legal Professional & Researcher</p>
-
-        <h1 class="font-display text-white mb-4 leading-tight opacity-0" style="font-size:clamp(2.4rem,5vw,4rem); font-weight:600; animation: fadeInUp 0.7s 0.4s forwards;">
-          Alireza<br />
-          <span style="color:#c5a14d;">Mahdavishirkharkolaei</span>
-        </h1>
-
-        <p class="text-gray-300 leading-relaxed mb-6 max-w-xl opacity-0" style="font-size:1rem; animation: fadeInUp 0.7s 0.6s forwards;">
-          LLM Researcher specializing in International Trade Law,WTO,Digital Tax, Tax Havens &amp; EU Legal Frameworks.
-        </p>
-
-        <!-- Meta info -->
-        <div class="flex flex-wrap justify-center md:justify-start gap-5 mb-8 opacity-0" style="animation: fadeInUp 0.7s 0.8s forwards;">
-          <span class="flex items-center gap-2 text-sm text-gray-300">
-            <i class="fa-solid fa-location-dot text-gold text-xs"></i> Nicosia, Cyprus
-          </span>
-          <a href="mailto:lawyer.alirezamahdavi@gmail.com" class="flex items-center gap-2 text-sm text-gray-300 hover:text-gold transition-colors">
-            <i class="fa-solid fa-envelope text-gold text-xs"></i> lawyer.alirezamahdavi@gmail.com
-          </a>
-          <a href="tel:+905338737916" class="flex items-center gap-2 text-sm text-gray-300 hover:text-gold transition-colors">
-            <i class="fa-solid fa-phone text-gold text-xs"></i> +90 533 873 7916
-          </a>
-        </div>
-
-        <div class="flex flex-wrap justify-center md:justify-start gap-4 opacity-0" style="animation: fadeInUp 0.7s 1s forwards;">
-          <a href="#publications" class="btn-gold">View Publications</a>
-          <a href="https://www.researchgate.net/profile/Alireza-Mahdavishirkharkolaei?ev=prf_overview" target="_blank" rel="noopener" class="btn-outline-gold flex items-center gap-2">
-            <i class="fa-brands fa-researchgate"></i> ResearchGate
-          </a>
-        </div>
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">Legal Researcher · LL.M. · Legal Technology</p>
+      <h1>Alireza <span>Mahdavishirkharkolaei</span></h1>
+      <p class="lead">I research international trade law, WTO law, tax havens and fiscal transparency, and I build open-source tools that turn legal analysis into transparent, testable software.</p>
+      <ul class="hero-meta">
+        <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Nicosia, Cyprus</li>
+        <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3zM3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg><a href="mailto:lawyer.alirezamahdavi@gmail.com">lawyer.alirezamahdavi@gmail.com</a></li>
+      </ul>
+      <div class="hero-actions">
+        <a class="btn-gold" href="#projects">Legal-tech projects</a>
+        <a class="btn-line" href="#publications">Publications</a>
+        <a class="icon-link" href="https://www.researchgate.net/profile/Alireza-Mahdavishirkharkolaei" target="_blank" rel="noopener" aria-label="ResearchGate profile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm4.6 13.8c1.4 0 2-.6 2-.6l-.2-.9s-.5.3-1.3.3c-1.4 0-2.1-1-2.1-2.6 0-1.7.8-2.6 2-2.6.8 0 1.2.3 1.2.3l.3-.9s-.6-.4-1.6-.4C7 9.4 5.8 10.8 5.8 13c0 2.3 1.1 3.8 2.8 3.8zm6.3-2.2c1.5-.4 2.3-1.4 2.3-2.6 0-1.6-1.2-2.4-3.1-2.4-.9 0-1.7.1-2.2.2v6.9h1.2v-2h.6l1.8 2h1.5zm-1.8-.8V10c.2 0 .5-.1.9-.1 1.1 0 1.7.5 1.7 1.3 0 1-.8 1.6-2 1.6z"/></svg>ResearchGate</a>
+        <a class="icon-link" href="https://github.com/AlirezaMahdavishirkharkolaei" target="_blank" rel="noopener" aria-label="GitHub profile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>GitHub</a>
       </div>
-
-      <!-- Photo -->
-      <div class="flex-shrink-0 opacity-0" style="animation: fadeInUp 0.8s 0.3s forwards;">
-        <div class="hero-photo-ring">
-          <img
-            src="https://via.placeholder.com/600x600/001f3f/c5a14d?text=Alireza+Photo"
-            alt="Alireza Mahdavishirkharkolaei – Legal Professional"
-            class="hero-photo"
-          />
-        </div>
-        <!-- Quick stats -->
-        <div class="flex justify-center gap-6 mt-8">
-          <div class="text-center">
-            <div class="font-display text-gold text-2xl font-semibold">3+</div>
-            <div class="text-gray-400 text-xs uppercase tracking-wider mt-0.5">Years Practice</div>
-          </div>
-          <div class="w-px bg-gold opacity-20"></div>
-          <div class="text-center">
-            <div class="font-display text-gold text-2xl font-semibold">2</div>
-            <div class="text-gray-400 text-xs uppercase tracking-wider mt-0.5">Publications</div>
-          </div>
-          <div class="w-px bg-gold opacity-20"></div>
-          <div class="text-center">
-            <div class="font-display text-gold text-2xl font-semibold">5</div>
-            <div class="text-gray-400 text-xs uppercase tracking-wider mt-0.5">Languages</div>
-          </div>
-        </div>
-      </div>
-
     </div>
+    <figure class="portrait">
+      <picture>
+        <source srcset="assets/alireza-mahdavishirkharkolaei.webp" type="image/webp">
+        <img src="assets/alireza-mahdavishirkharkolaei.jpg" width="640" height="800" alt="Portrait of Alireza Mahdavishirkharkolaei" fetchpriority="high">
+      </picture>
+    </figure>
   </div>
-
-  <!-- Scroll indicator -->
-  <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gold opacity-60 hover:opacity-100 transition-opacity">
-    <span class="text-xs tracking-widest uppercase font-body">Scroll</span>
-    <i class="fa-solid fa-chevron-down text-sm animate-bounce"></i>
-  </a>
+  <div class="wrap">
+    <dl class="stats">
+      <div><dt>LL.M.</dt><dd>Cyprus International University</dd></div>
+      <div><dt>2</dt><dd>research preprints, 2026</dd></div>
+      <div><dt>4</dt><dd>open-source legal-tech tools</dd></div>
+      <div><dt>5</dt><dd>languages</dd></div>
+    </dl>
+  </div>
 </section>
 
-
-<!-- ═══════════════════════════════════════════════
-     ABOUT
-═══════════════════════════════════════════════ -->
-<section id="about" class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-2 gap-16 items-center">
-
-      <!-- Left: Text -->
-      <div class="fade-up">
-        <p class="section-subtitle mb-3">Who I Am</p>
-        <h2 class="section-title mb-5">A Dedicated<br /><em>Legal Scholar</em></h2>
-        <span class="gold-rule mb-6 block"></span>
-        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
-          I am a legal researcher and advisor with a strong academic and practical background in international trade law, tax policy, and regulatory compliance. I hold an LL.M. from Cyprus International University, where my research focused on the legal and economic implications of tax havens and their impact on global trade governance.
-My academic work explores the intersection of fiscal transparency, corporate regulation, and international legal frameworks, with a particular emphasis on the challenges of coherence within the global trading system. Through my research, I have developed a deep understanding of compliance structures, EU legal frameworks, and cross-border regulatory analysis.
-Professionally, I serve as a Legal Advisor at the Consulate of the Islamic Republic of Iran in Northern Cyprus, where I work on real-world legal and diplomatic matters involving international regulations and policy interpretation. My experience also includes roles as a Research Assistant and Legal Assistant, strengthening both my analytical and practical legal skills.
-        </p>
-        <p class="text-gray-600 leading-relaxed mb-6" style="font-size:0.97rem;">
-          In addition to my legal expertise, I bring a technical edge through my work as a mid-level AI programmer. I utilize tools such as Python, R, and data analysis platforms to enhance legal research, enabling data-driven insights and innovative approaches to complex legal problems.
-With multilingual proficiency and a multidisciplinary mindset, I aim to position myself at the forefront of modern legal consultancy—where law, technology, and global economics converge.
-        </p>
-
-        <!-- Contact quick-links -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="flex items-start gap-3 p-4 border border-gray-100 rounded-sm">
-            <i class="fa-solid fa-envelope text-gold mt-1"></i>
-            <div>
-              <div class="text-xs text-gray-400 uppercase tracking-wider mb-0.5">Email</div>
-              <a href="mailto:lawyer.alirezamahdavi@gmail.com" class="text-navy text-sm font-medium hover:text-gold transition-colors break-all">
-                lawyer.alirezamahdavi@gmail.com
-              </a>
-            </div>
-          </div>
-          <div class="flex items-start gap-3 p-4 border border-gray-100 rounded-sm">
-            <i class="fa-solid fa-phone text-gold mt-1"></i>
-            <div>
-              <div class="text-xs text-gray-400 uppercase tracking-wider mb-0.5">Phone</div>
-              <a href="tel:+905338737916" class="text-navy text-sm font-medium hover:text-gold transition-colors">+905338737916</a>
-            </div>
-          </div>
-          <div class="flex items-start gap-3 p-4 border border-gray-100 rounded-sm">
-            <i class="fa-solid fa-location-dot text-gold mt-1"></i>
-            <div>
-              <div class="text-xs text-gray-400 uppercase tracking-wider mb-0.5">Location</div>
-              <span class="text-navy text-sm font-medium">Cyprus | Nicosia</span>
-            </div>
-          </div>
-          <div class="flex items-start gap-3 p-4 border border-gray-100 rounded-sm">
-            <i class="fa-brands fa-researchgate text-gold mt-1"></i>
-            <div>
-              <div class="text-xs text-gray-400 uppercase tracking-wider mb-0.5">ResearchGate</div>
-              <a href="https://www.researchgate.net/profile/Alireza-Mahdavishirkharkolaei?ev=prf_overview" target="_blank" rel="noopener" class="text-navy text-sm font-medium hover:text-gold transition-colors">View Profile</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: Decorative card -->
-      <div class="fade-up" style="transition-delay:0.2s;">
-        <div class="relative">
-          <div class="absolute -top-4 -left-4 w-full h-full border border-gold opacity-20 rounded-sm"></div>
-          <div class="bg-navy p-10 rounded-sm relative">
-            <h3 class="font-display text-white text-2xl font-semibold mb-6">Core Expertise</h3>
-            <div class="space-y-5">
-              <div class="flex items-start gap-4">
-                <div class="w-10 h-10 bg-gold bg-opacity-10 border border-gold border-opacity-30 rounded-sm flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <i class="fa-solid fa-globe text-gold text-sm"></i>
-                </div>
-                <div>
-                  <div class="text-white font-medium text-sm mb-1">International Trade Law</div>
-                  <div class="text-gray-400 text-xs leading-relaxed">Deep expertise in global trade governance, WTO frameworks, and cross-border legal fragmentation.</div>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <div class="w-10 h-10 bg-gold bg-opacity-10 border border-gold border-opacity-30 rounded-sm flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <i class="fa-solid fa-building-columns text-gold text-sm"></i>
-                </div>
-                <div>
-                  <div class="text-white font-medium text-sm mb-1">Tax Havens & Fiscal Policy</div>
-                  <div class="text-gray-400 text-xs leading-relaxed">Research on tax haven impacts, corporate transparency, and open access to fiscal information.</div>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <div class="w-10 h-10 bg-gold bg-opacity-10 border border-gold border-opacity-30 rounded-sm flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <i class="fa-solid fa-eu text-gold text-sm"></i>
-                </div>
-                <div>
-                  <div class="text-white font-medium text-sm mb-1">EU Legal Frameworks</div>
-                  <div class="text-gray-400 text-xs leading-relaxed">Compliance research and regulatory analysis within European legal and institutional structures.</div>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <div class="w-10 h-10 bg-gold bg-opacity-10 border border-gold border-opacity-30 rounded-sm flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <i class="fa-solid fa-microchip text-gold text-sm"></i>
-                </div>
-                <div>
-                  <div class="text-white font-medium text-sm mb-1">Legal Tech & AI</div>
-                  <div class="text-gray-400 text-xs leading-relaxed">Mid-level AI programming capability bridging modern technology with legal research methodology.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+<section id="about" class="section">
+  <div class="wrap two-col">
+    <div class="reveal">
+      <p class="kicker">Who I am</p>
+      <h2>Law, global economics and technology</h2>
+      <p>I am a legal researcher and advisor with an academic and practical background in international trade law, tax policy and regulatory compliance. I hold an LL.M. from Cyprus International University, where my thesis examined the legal and economic implications of tax havens and their impact on global trade governance.</p>
+      <p>My research explores the intersection of fiscal transparency, corporate regulation and international legal frameworks, with a particular focus on coherence within the global trading system and the relationship between WTO and EU law.</p>
+      <p>Professionally, I serve as a part-time Legal Advisor at the Consulate of the Islamic Republic of Iran in Northern Cyprus, working on legal matters involving international regulations and policy interpretation. Earlier roles as a Research Assistant and Legal Assistant strengthened both my analytical and practical legal skills.</p>
+      <p>I also build software. Using Python and data analysis, I develop open-source tools that make legal reasoning explicit and verifiable, from WTO services-trade analysis to tax-risk screening and contract review. I aim to work where law, technology and the global economy meet.</p>
+    </div>
+    <div class="reveal">
+      <h3 class="small-head">Research interests</h3>
+      <ul class="interests">
+        <li><b>International trade law</b><span>Global trade governance, WTO frameworks (GATT, GATS) and legal fragmentation.</span></li>
+        <li><b>Tax havens &amp; fiscal policy</b><span>Tax haven impacts, BEPS and Pillar Two, corporate transparency and access to fiscal information.</span></li>
+        <li><b>EU legal frameworks</b><span>Compliance research and regulatory analysis within EU legal and institutional structures.</span></li>
+        <li><b>Legal technology</b><span>Rules as code, explainable legal reasoning systems and verified AI for legal documents.</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
-
-<!-- ═══════════════════════════════════════════════
-     EDUCATION
-═══════════════════════════════════════════════ -->
-<section id="education" class="py-24" style="background:#f8f7f4;">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16 fade-up">
-      <p class="section-subtitle mb-3">Academic Background</p>
-      <h2 class="section-title">Education</h2>
-      <span class="gold-rule mt-4 block mx-auto"></span>
+<section id="projects" class="section alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Open source</p>
+      <h2>Legal-tech projects</h2>
+      <p>Research tools that apply legal frameworks transparently. Each one runs in the browser, is tested, and cites the legal basis of its output.</p>
     </div>
-
-    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-
-      <!-- Bachelor -->
-      <div class="card p-8 fade-up">
-        <div class="flex items-start justify-between mb-5">
-          <div class="w-14 h-14 bg-navy rounded-sm flex items-center justify-center flex-shrink-0">
-            <i class="fa-solid fa-graduation-cap text-gold text-xl"></i>
-          </div>
-          <span class="text-xs bg-gold bg-opacity-10 text-gold border border-gold border-opacity-30 px-3 py-1 rounded-sm font-medium tracking-wider uppercase">2020 – 2023</span>
-        </div>
-        <h3 class="font-display text-navy text-xl font-semibold mb-2">Bachelor Degree of Law</h3>
-        <div class="flex items-center gap-2 mb-4">
-          <span class="text-gold font-semibold text-sm">GPA: 3.5 / 4.0</span>
-        </div>
-        <p class="text-gray-500 text-sm flex items-center gap-2 mb-1">
-          <i class="fa-solid fa-university text-gold text-xs"></i>
-          Islamic Azad University of Babol
-        </p>
-        <p class="text-gray-400 text-xs flex items-center gap-2">
-          <i class="fa-solid fa-flag text-gold text-xs"></i>
-          Iran
-        </p>
-      </div>
-
-      <!-- Master -->
-      <div class="card p-8 fade-up" style="transition-delay:0.15s;">
-        <div class="flex items-start justify-between mb-5">
-          <div class="w-14 h-14 bg-navy rounded-sm flex items-center justify-center flex-shrink-0">
-            <i class="fa-solid fa-scroll text-gold text-xl"></i>
-          </div>
-          <span class="text-xs bg-gold bg-opacity-10 text-gold border border-gold border-opacity-30 px-3 py-1 rounded-sm font-medium tracking-wider uppercase">2023 – 2025</span>
-        </div>
-        <h3 class="font-display text-navy text-xl font-semibold mb-2">Master Degree of Law (LLM)</h3>
-        <div class="flex items-center gap-2 mb-4">
-          <span class="text-gold font-semibold text-sm">GPA: 3.45 / 4.0</span>
-        </div>
-        <p class="text-gray-500 text-sm flex items-center gap-2 mb-1">
-          <i class="fa-solid fa-university text-gold text-xs"></i>
-          Cyprus International University (CIU)
-        </p>
-        <p class="text-gray-400 text-xs flex items-center gap-2">
-          <i class="fa-solid fa-flag text-gold text-xs"></i>
-          Cyprus
-        </p>
-      </div>
+    <div class="cards">
+      <article class="card reveal">
+        <p class="tag">WTO law · GATS</p>
+        <h3>WTO–GATS Reasoning Engine</h3>
+        <p>Takes a regulatory measure through the GATS analytical sequence developed in WTO jurisprudence. It produces a reasoning trace with the provisions and disputes behind each step, and it reports missing facts as information gaps instead of guessing them.</p>
+        <p class="links"><a href="https://alirezamahdavishirkharkolaei.github.io/wto-gats-reasoning-engine/" target="_blank" rel="noopener">Open the tool →</a><a href="https://github.com/AlirezaMahdavishirkharkolaei/wto-gats-reasoning-engine" target="_blank" rel="noopener">Code</a></p>
+      </article>
+      <article class="card reveal">
+        <p class="tag">International tax · Pillar Two</p>
+        <h3>TaxRiskScan</h3>
+        <p>Analyses Country-by-Country Reporting data to flag jurisdictions with signs of profit shifting or low taxation, and screens them for Pillar Two minimum-tax exposure. It combines transparent rules, each linked to its legal basis, with a classifier trained on real public CbCRs.</p>
+        <p class="links"><a href="https://alirezamahdavishirkharkolaei.github.io/Tax_Risk_AI/" target="_blank" rel="noopener">Open the tool →</a><a href="https://github.com/AlirezaMahdavishirkharkolaei/Tax_Risk_AI" target="_blank" rel="noopener">Code</a></p>
+      </article>
+      <article class="card reveal">
+        <p class="tag">Rules as code</p>
+        <h3>Legal-to-Code</h3>
+        <p>A research framework that classifies rules of international economic law by how far they can be computed, then implements the computable ones as tested, traceable code. Coverage includes the OECD Model Tax Convention and the WTO dispute settlement timeline.</p>
+        <p class="links"><a href="https://alirezamahdavishirkharkolaei.github.io/Legal-to-Code/" target="_blank" rel="noopener">Open the tool →</a><a href="https://github.com/AlirezaMahdavishirkharkolaei/Legal-to-Code" target="_blank" rel="noopener">Code</a></p>
+      </article>
+      <article class="card reveal">
+        <p class="tag">Contracts · AI</p>
+        <h3>LexScan</h3>
+        <p>A contract review workspace with an instant clause scan in English, Turkish and Greek, and an AI review in which every quoted passage is checked against the document. The interface is available in six languages.</p>
+        <p class="links"><a href="https://alirezamahdavishirkharkolaei.github.io/LEXSCAN/" target="_blank" rel="noopener">Open the tool →</a><a href="https://github.com/AlirezaMahdavishirkharkolaei/LEXSCAN" target="_blank" rel="noopener">Code</a></p>
+      </article>
     </div>
-
-    <!-- Thesis highlight -->
-    <div class="mt-10 max-w-5xl mx-auto fade-up">
-      <div class="bg-navy rounded-sm p-8 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-48 h-48 bg-gold opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-        <div class="flex flex-col md:flex-row items-start md:items-center gap-6 relative z-10">
-          <div class="w-14 h-14 bg-gold bg-opacity-10 border border-gold border-opacity-30 rounded-sm flex items-center justify-center flex-shrink-0">
-            <i class="fa-solid fa-book-open text-gold text-xl"></i>
-          </div>
-          <div>
-            <div class="text-xs text-gold uppercase tracking-widest font-semibold mb-2">Master's Thesis (LLM)</div>
-            <h4 class="font-display text-white text-xl font-semibold leading-snug">
-              The Impact of Tax Havens on International Trade Law
-            </h4>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-
-<!-- ═══════════════════════════════════════════════
-     EXPERIENCE
-═══════════════════════════════════════════════ -->
-<section id="experience" class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16 fade-up">
-      <p class="section-subtitle mb-3">Professional Journey</p>
-      <h2 class="section-title">Work Experience</h2>
-      <span class="gold-rule mt-4 block mx-auto"></span>
+<section id="publications" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Scholarly work</p>
+      <h2>Publications &amp; research</h2>
     </div>
+    <ol class="pubs">
+      <li class="pub reveal">
+        <p class="tag">Preprint · Cambridge Open Engage · 2026</p>
+        <h3>From Fiscal to Legal Fragmentation: Coherence Challenges in Global Trade Governance</h3>
+        <p>Argues that tax havens are not a mere fiscal anomaly but a symptom of a deeper institutional crisis in the fragmentation of international trade governance. Through doctrinal and comparative analysis of tax, trade and environmental regimes, it draws a parallel between the loss of coherence in global tax law and the growing divergence between the WTO and the EU, and proposes coherence as a preventive principle of international economic law.</p>
+        <p class="keywords">Tax havens · Fiscal fragmentation · Legal fragmentation · International trade governance · WTO–EU relations</p>
+        <p class="links"><a href="https://www.cambridge.org/engage/coe/article-details/69a9ca1dd1922e37d53e9c10" target="_blank" rel="noopener">Read the preprint →</a><button type="button" class="cite-btn" data-cite="Mahdavishirkharkolaei, A. (2026). From Fiscal to Legal Fragmentation: Coherence Challenges in Global Trade Governance [Preprint]. Cambridge Open Engage. https://www.cambridge.org/engage/coe/article-details/69a9ca1dd1922e37d53e9c10">Copy citation</button></p>
+      </li>
+      <li class="pub reveal">
+        <p class="tag">Preprint · Cambridge Open Engage · 2026</p>
+        <h3>The Legal and Technological Implications of Tax Havens: Challenges to Corporate Transparency and Open Access to Fiscal Information</h3>
+        <p>Examines how the opacity of offshore financial systems undermines corporate transparency and public access to fiscal information in the post-BEPS era. Drawing on the Panama Papers and Country-by-Country Reporting, it analyses the tension between corporate confidentiality and the public interest, and recommends legal and technological mechanisms to harmonise international norms and strengthen accountability.</p>
+        <p class="keywords">Tax havens · Fiscal transparency · BEPS · Open access to legal information · Corporate tax disclosure</p>
+        <p class="links"><a href="https://www.cambridge.org/engage/coe/article-details/69a9e0c5d1922e37d53f0fa3" target="_blank" rel="noopener">Read the preprint →</a><button type="button" class="cite-btn" data-cite="Mahdavishirkharkolaei, A. (2026). The Legal and Technological Implications of Tax Havens: Challenges to Corporate Transparency and Open Access to Fiscal Information [Preprint]. Cambridge Open Engage. https://www.cambridge.org/engage/coe/article-details/69a9e0c5d1922e37d53f0fa3">Copy citation</button></p>
+      </li>
+      <li class="pub reveal">
+        <p class="tag">LL.M. thesis · Cyprus International University · 2025</p>
+        <h3>The Impact of Tax Havens on International Trade Law</h3>
+        <p>Investigates how offshore financial centres and tax haven jurisdictions shape, distort and challenge the established frameworks of international trade law. Supervised by Dr. İdil İnal.</p>
+        <p class="keywords">International trade law · Tax havens · WTO</p>
+      </li>
+    </ol>
+  </div>
+</section>
 
-    <div class="max-w-4xl mx-auto">
-      <div class="space-y-10 pl-4">
-
-        <!-- Experience 1 -->
-        <div class="timeline-item fade-up">
-          <div class="card p-6 ml-2">
-            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-3">
-              <h3 class="font-display text-navy text-xl font-semibold">Legal Advisor <span class="text-gray-400 font-normal text-base">(Part-Time)</span></h3>
-              <span class="text-xs bg-gold bg-opacity-10 text-gold border border-gold border-opacity-30 px-3 py-1 rounded-sm font-medium uppercase tracking-wider self-start whitespace-nowrap">Current</span>
-            </div>
-            <p class="text-gold text-sm font-semibold mb-2">Consulate of the Islamic Republic of Iran – Northern Cyprus</p>
-            <p class="text-gray-500 text-sm leading-relaxed">
-              Providing legal advisory services within a diplomatic context, applying knowledge of Iranian law, 
-              international legal standards, and EU regulatory frameworks to assist consular operations.
-            </p>
-          </div>
-        </div>
-
-        <!-- Experience 2 -->
-        <div class="timeline-item fade-up" style="transition-delay:0.1s;">
-          <div class="card p-6 ml-2">
-            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-3">
-              <h3 class="font-display text-navy text-xl font-semibold">Legal Assistant</h3>
-              <span class="text-xs bg-gold bg-opacity-10 text-gold border border-gold border-opacity-30 px-3 py-1 rounded-sm font-medium uppercase tracking-wider self-start whitespace-nowrap">2022 – 2023</span>
-            </div>
-            <p class="text-gold text-sm font-semibold mb-2">Private Law Firm – Iran</p>
-            <p class="text-gray-500 text-sm leading-relaxed">
-              Supported attorneys with case research, legal writing, documentation, and client correspondence 
-              within a private practice setting in Iran, gaining foundational hands-on legal experience.
-            </p>
-          </div>
-        </div>
-
-        <!-- Experience 3 -->
-        <div class="timeline-item fade-up" style="transition-delay:0.2s;">
-          <div class="card p-6 ml-2">
-            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-3">
-              <h3 class="font-display text-navy text-xl font-semibold">Research Assistant <span class="text-gray-400 font-normal text-base">(LL.M. Program)</span></h3>
-              <span class="text-xs bg-gold bg-opacity-10 text-gold border border-gold border-opacity-30 px-3 py-1 rounded-sm font-medium uppercase tracking-wider self-start whitespace-nowrap">2023 – 2024</span>
-            </div>
-            <p class="text-gold text-sm font-semibold mb-2">Cyprus International University – School of Law</p>
-            <p class="text-gray-500 text-sm leading-relaxed">
-              Conducted academic legal research under faculty supervision, contributed to scholarly publications, 
-              and applied comparative and policy analysis methodologies to international law topics.
-            </p>
-          </div>
-        </div>
-
-        <!-- Experience 4 -->
-        <div class="timeline-item fade-up" style="transition-delay:0.3s;">
-          <div class="card p-6 ml-2">
-            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-3">
-              <h3 class="font-display text-navy text-xl font-semibold">AI Programmer <span class="text-gray-400 font-normal text-base">(Mid-Level)</span></h3>
-              <span class="text-xs bg-gold bg-opacity-10 text-gold border border-gold border-opacity-30 px-3 py-1 rounded-sm font-medium uppercase tracking-wider self-start whitespace-nowrap">Since 2023</span>
-            </div>
-            <p class="text-gold text-sm font-semibold mb-2">Independent / Freelance</p>
-            <p class="text-gray-500 text-sm leading-relaxed">
-              Developing AI-powered tools and data-driven solutions with a focus on legal research automation, 
-              data analysis, and integration of AI technologies within legal and compliance workflows.
-            </p>
-          </div>
-        </div>
-
+<section id="education" class="section alt">
+  <div class="wrap">
+    <div class="section-head reveal"><p class="kicker">Academic background</p><h2>Education</h2></div>
+    <div class="timeline">
+      <div class="t-item reveal">
+        <p class="when">2023 – 2025</p>
+        <h3>Master of Laws (LL.M.)</h3>
+        <p class="where">Cyprus International University (CIU), Cyprus</p>
+        <p>Thesis: <i>The Impact of Tax Havens on International Trade Law</i>. Taught entirely in English. GPA 3.45 / 4.0.</p>
+      </div>
+      <div class="t-item reveal">
+        <p class="when">2020 – 2023</p>
+        <h3>Bachelor of Laws (LL.B.)</h3>
+        <p class="where">Islamic Azad University of Babol, Iran</p>
+        <p>GPA 3.5 / 4.0.</p>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ═══════════════════════════════════════════════
-     PUBLICATIONS
-═══════════════════════════════════════════════ -->
-<section id="publications" class="py-24" style="background:#f8f7f4;">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16 fade-up">
-      <p class="section-subtitle mb-3">Scholarly Work</p>
-      <h2 class="section-title">Publications &amp; Research</h2>
-      <span class="gold-rule mt-4 block mx-auto"></span>
-      <p class="text-gray-500 mt-4 text-sm max-w-xl mx-auto">Click any card to view details and access the full article.</p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <!-- Publication 1 -->
-      <div class="pub-card fade-up" onclick="openModal(0)">
-        <div class="w-12 h-12 bg-navy rounded-sm flex items-center justify-center mb-5">
-          <i class="fa-solid fa-file-lines text-gold text-lg"></i>
-        </div>
-        <span class="text-xs text-gold uppercase tracking-widest font-semibold mb-3 block">Journal Article</span>
-        <h3 class="font-display text-navy text-xl font-semibold leading-snug mb-4">
-          From Fiscal to Legal Fragmentation: Coherence Challenges in Global Trade Governance
-        </h3>
-        <p class="text-gray-500 text-sm leading-relaxed mb-6">
-          An analytical examination of how tax haven structures contribute to legal fragmentation and coherence 
-          challenges within the global trade governance system.
-        </p>
-        <div class="flex items-center gap-2 text-gold text-sm font-semibold group-hover:gap-3 transition-all">
-          <span>Read More</span>
-          <i class="fa-solid fa-arrow-right text-xs"></i>
-        </div>
+<section id="experience" class="section">
+  <div class="wrap">
+    <div class="section-head reveal"><p class="kicker">Professional journey</p><h2>Experience</h2></div>
+    <div class="timeline">
+      <div class="t-item reveal">
+        <p class="when">Current · part-time</p>
+        <h3>Legal Advisor</h3>
+        <p class="where">Consulate of the Islamic Republic of Iran, Northern Cyprus</p>
+        <p>Legal advice in a diplomatic setting, applying Iranian law, international legal standards and EU regulatory frameworks to consular matters.</p>
       </div>
-
-      <!-- Publication 2 -->
-      <div class="pub-card fade-up" style="transition-delay:0.15s;" onclick="openModal(1)">
-        <div class="w-12 h-12 bg-navy rounded-sm flex items-center justify-center mb-5">
-          <i class="fa-solid fa-landmark text-gold text-lg"></i>
-        </div>
-        <span class="text-xs text-gold uppercase tracking-widest font-semibold mb-3 block">Journal Article</span>
-        <h3 class="font-display text-navy text-xl font-semibold leading-snug mb-4">
-          The Legal and Technological Implications of Tax Havens: Challenges to Corporate Transparency and Open Access to Fiscal Information
-        </h3>
-        <p class="text-gray-500 text-sm leading-relaxed mb-6">
-          Exploring the intersection of law and technology in the context of tax havens, corporate opacity, 
-          and the global push for fiscal transparency and open information access.
-        </p>
-        <div class="flex items-center gap-2 text-gold text-sm font-semibold">
-          <span>Read More</span>
-          <i class="fa-solid fa-arrow-right text-xs"></i>
-        </div>
+      <div class="t-item reveal">
+        <p class="when">Since 2023</p>
+        <h3>Legal-Tech Developer</h3>
+        <p class="where">Independent · open source</p>
+        <p>Design and development of AI-assisted and rule-based tools for legal research, tax-risk analysis and contract review (see <a href="#projects">projects</a>).</p>
       </div>
-
-      <!-- Publication 3 / Thesis -->
-      <div class="pub-card fade-up" style="transition-delay:0.3s;" onclick="openModal(2)">
-        <div class="w-12 h-12 bg-navy rounded-sm flex items-center justify-center mb-5">
-          <i class="fa-solid fa-book text-gold text-lg"></i>
-        </div>
-        <span class="text-xs text-gold uppercase tracking-widest font-semibold mb-3 block">LLM Thesis</span>
-        <h3 class="font-display text-navy text-xl font-semibold leading-snug mb-4">
-          The Impact of Tax Havens on International Trade Law
-        </h3>
-        <p class="text-gray-500 text-sm leading-relaxed mb-6">
-          Master's thesis investigating how offshore financial centers and tax haven jurisdictions shape, 
-          distort, and challenge the established frameworks of international trade law.
-        </p>
-        <div class="flex items-center gap-2 text-gold text-sm font-semibold">
-          <span>Read More</span>
-          <i class="fa-solid fa-arrow-right text-xs"></i>
-        </div>
+      <div class="t-item reveal">
+        <p class="when">2023 – 2024</p>
+        <h3>Research Assistant (LL.M. programme)</h3>
+        <p class="where">Cyprus International University, Faculty of Law</p>
+        <p>Academic legal research under faculty supervision, contributions to scholarly work, and comparative and policy analysis of international law topics.</p>
       </div>
-
+      <div class="t-item reveal">
+        <p class="when">2022 – 2023</p>
+        <h3>Legal Assistant</h3>
+        <p class="where">Private law firm, Iran</p>
+        <p>Case research, legal writing, documentation and client correspondence in private practice.</p>
+      </div>
     </div>
   </div>
 </section>
 
-
-<!-- ═══════════════════════════════════════════════
-     SKILLS
-═══════════════════════════════════════════════ -->
-<section id="skills" class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16 fade-up">
-      <p class="section-subtitle mb-3">Capabilities</p>
-      <h2 class="section-title">Research &amp; Technical Skills</h2>
-      <span class="gold-rule mt-4 block mx-auto"></span>
+<section id="skills" class="section alt">
+  <div class="wrap three-col">
+    <div class="reveal">
+      <h3 class="small-head">Research methods</h3>
+      <ul class="chips"><li>Doctrinal analysis</li><li>Comparative analysis</li><li>Policy analysis</li><li>Compliance research</li><li>Regulatory analysis</li><li>Legal writing</li><li>IRAC</li></ul>
     </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-
-      <!-- Methodologies -->
-      <div class="fade-up col-span-full lg:col-span-2">
-        <div class="card p-8 h-full">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-10 h-10 bg-navy rounded-sm flex items-center justify-center">
-              <i class="fa-solid fa-magnifying-glass text-gold text-sm"></i>
-            </div>
-            <h3 class="font-display text-navy text-xl font-semibold">Research Methodologies</h3>
-          </div>
-          <div class="flex flex-wrap gap-3">
-            <span class="skill-pill">Comparative Analysis</span>
-            <span class="skill-pill">Policy Analysis</span>
-            <span class="skill-pill">Compliance Research</span>
-            <span class="skill-pill">Legal Writing</span>
-            <span class="skill-pill">EU Legal Frameworks</span>
-            <span class="skill-pill">Regulatory Analysis</span>
-            <span class="skill-pill">IRAC Method</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Software -->
-      <div class="fade-up" style="transition-delay:0.15s;">
-        <div class="card p-8 h-full">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-10 h-10 bg-navy rounded-sm flex items-center justify-center">
-              <i class="fa-solid fa-laptop-code text-gold text-sm"></i>
-            </div>
-            <h3 class="font-display text-navy text-xl font-semibold">Software & Tools</h3>
-          </div>
-          <div class="flex flex-wrap gap-3">
-            <span class="skill-pill">Microsoft Office Suite</span>
-            <span class="skill-pill">SPSS</span>
-            <span class="skill-pill">R</span>
-            <span class="skill-pill">Python</span>
-            <span class="skill-pill">AI Tools</span>
-            <span class="skill-pill">Data Platforms</span>
-          </div>
-        </div>
-      </div>
-
+    <div class="reveal">
+      <h3 class="small-head">Technical</h3>
+      <ul class="chips"><li>Python</li><li>R</li><li>SPSS</li><li>Machine learning (scikit-learn)</li><li>LLM APIs</li><li>JavaScript</li><li>Git &amp; GitHub</li><li>Microsoft Office</li></ul>
     </div>
-
-    <!-- Languages -->
-    <div class="mt-12 max-w-6xl mx-auto fade-up">
-      <div class="card p-8">
-        <div class="flex items-center gap-3 mb-8">
-          <div class="w-10 h-10 bg-navy rounded-sm flex items-center justify-center">
-            <i class="fa-solid fa-language text-gold text-sm"></i>
-          </div>
-          <h3 class="font-display text-navy text-xl font-semibold">Languages</h3>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-          <div class="lang-item" data-pct="100">
-            <div class="flex justify-between mb-2">
-              <span class="text-navy font-medium text-sm">Persian</span>
-              <span class="text-gold text-xs font-semibold uppercase tracking-wider">Native</span>
-            </div>
-            <div class="lang-bar-bg"><div class="lang-bar-fill" data-width="100"></div></div>
-          </div>
-
-          <div class="lang-item">
-            <div class="flex justify-between mb-2">
-              <span class="text-navy font-medium text-sm">English</span>
-              <span class="text-gold text-xs font-semibold uppercase tracking-wider">Advanced</span>
-            </div>
-            <div class="lang-bar-bg"><div class="lang-bar-fill" data-width="92"></div></div>
-            <p class="text-gray-400 text-xs mt-1">Completed Master's degree entirely in English</p>
-          </div>
-
-          <div class="lang-item">
-            <div class="flex justify-between mb-2">
-              <span class="text-navy font-medium text-sm">Tajik</span>
-              <span class="text-gold text-xs font-semibold uppercase tracking-wider">Fluent</span>
-            </div>
-            <div class="lang-bar-bg"><div class="lang-bar-fill" data-width="88"></div></div>
-          </div>
-
-          <div class="lang-item">
-            <div class="flex justify-between mb-2">
-              <span class="text-navy font-medium text-sm">Turkish</span>
-              <span class="text-gold text-xs font-semibold uppercase tracking-wider">Fluent</span>
-            </div>
-            <div class="lang-bar-bg"><div class="lang-bar-fill" data-width="85"></div></div>
-          </div>
-
-          <div class="lang-item">
-            <div class="flex justify-between mb-2">
-              <span class="text-navy font-medium text-sm">Dutch</span>
-              <span class="text-gold text-xs font-semibold uppercase tracking-wider">Basic</span>
-            </div>
-            <div class="lang-bar-bg"><div class="lang-bar-fill" data-width="25"></div></div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════════
-     REFERENCES
-═══════════════════════════════════════════════ -->
-<section id="references" class="py-24 bg-navy">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16 fade-up">
-      <p class="text-gold text-xs uppercase tracking-widest font-semibold mb-3">Academic Endorsements</p>
-      <h2 class="font-display text-white text-4xl font-semibold">References</h2>
-      <span class="gold-rule mt-4 block mx-auto"></span>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-
-      <!-- Ref 1 -->
-      <div class="fade-up bg-navy-light border border-gold border-opacity-20 p-8 rounded-sm relative overflow-hidden hover:border-opacity-50 transition-all duration-300">
-        <div class="absolute top-0 right-0 w-20 h-20 bg-gold opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-        <div class="w-14 h-14 bg-gold bg-opacity-10 border border-gold border-opacity-30 rounded-full flex items-center justify-center mb-5">
-          <i class="fa-solid fa-user-tie text-gold text-xl"></i>
-        </div>
-        <h4 class="font-display text-white text-lg font-semibold mb-1">Professor Dr.Hasan Oral</h4>
-        <p class="text-gold text-xs uppercase tracking-wider font-semibold mb-3"> International law / Law Department</p>
-        <p class="text-gray-400 text-xs mb-4">Cyprus International University</p>
-        <a href="mailto:professor1@university.edu" class="flex items-center gap-2 text-gray-400 text-xs hover:text-gold transition-colors">
-          <i class="fa-solid fa-envelope text-xs"></i>
-          <span></span>
-        </a>
-      </div>
-
-      <!-- Ref 2 -->
-      <div class="fade-up bg-navy-light border border-gold border-opacity-20 p-8 rounded-sm relative overflow-hidden hover:border-opacity-50 transition-all duration-300" style="transition-delay:0.15s;">
-        <div class="absolute top-0 right-0 w-20 h-20 bg-gold opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-        <div class="w-14 h-14 bg-gold bg-opacity-10 border border-gold border-opacity-30 rounded-full flex items-center justify-center mb-5">
-          <i class="fa-solid fa-user-tie text-gold text-xl"></i>
-        </div>
-        <h4 class="font-display text-white text-lg font-semibold mb-1">Professor Dr.Latif Aran</h4>
-        <p class="text-gold text-xs uppercase tracking-wider font-semibold mb-3">International law / Law Department</p>
-        <p class="text-gray-400 text-xs mb-4">Cyprus International University</p>
-        <a href="mailto:professor2@university.edu" class="flex items-center gap-2 text-gray-400 text-xs hover:text-gold transition-colors">
-          <i class="fa-solid fa-envelope text-xs"></i>
-          <span></span>
-        </a>
-      </div>
-
-      <!-- Ref 3 -->
-      <div class="fade-up bg-navy-light border border-gold border-opacity-20 p-8 rounded-sm relative overflow-hidden hover:border-opacity-50 transition-all duration-300" style="transition-delay:0.3s;">
-        <div class="absolute top-0 right-0 w-20 h-20 bg-gold opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-        <div class="w-14 h-14 bg-gold bg-opacity-10 border border-gold border-opacity-30 rounded-full flex items-center justify-center mb-5">
-          <i class="fa-solid fa-user-tie text-gold text-xl"></i>
-        </div>
-        <h4 class="font-display text-white text-lg font-semibold mb-1">Professor Dr.Ticen Aziz Özraşit</h4>
-        <p class="text-gold text-xs uppercase tracking-wider font-semibold mb-3">International Law / Law Department</p>
-        <p class="text-gray-400 text-xs mb-4">Cyprus International University</p>
-        <a href="mailto:professor3@university.edu" class="flex items-center gap-2 text-gray-400 text-xs hover:text-gold transition-colors">
-          <i class="fa-solid fa-envelope text-xs"></i>
-          <span></span>
-        </a>
-      </div>
-
+    <div class="reveal">
+      <h3 class="small-head">Languages</h3>
+      <ul class="langs">
+        <li><b>Persian</b><span>Native</span></li>
+        <li><b>English</b><span>Advanced · LL.M. completed in English</span></li>
+        <li><b>Turkish</b><span>Fluent</span></li>
+        <li><b>Tajik</b><span>Fluent</span></li>
+        <li><b>Dutch</b><span>Basic</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════
-     CONTACT
-═══════════════════════════════════════════════ -->
-<section id="contact" class="py-24" style="background:#f8f7f4;">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16 fade-up">
-      <p class="section-subtitle mb-3">Let's Connect</p>
-      <h2 class="section-title">Get in Touch</h2>
-      <span class="gold-rule mt-4 block mx-auto"></span>
+<section id="references" class="section dark">
+  <div class="wrap">
+    <div class="section-head reveal"><p class="kicker">Academic endorsements</p><h2>References</h2></div>
+    <div class="refs">
+      <div class="reveal"><b>Prof. Dr. Hasan Oral</b><span>International Law · Faculty of Law, Cyprus International University</span></div>
+      <div class="reveal"><b>Prof. Dr. Latif Aran</b><span>International Law · Faculty of Law, Cyprus International University</span></div>
+      <div class="reveal"><b>Prof. Dr. Ticen Aziz Özraşit</b><span>International Law · Faculty of Law, Cyprus International University</span></div>
     </div>
-
-    <div class="grid lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
-
-      <!-- Left info -->
-      <div class="fade-up">
-        <h3 class="font-display text-navy text-2xl font-semibold mb-4">Open for Legal Consultations &amp; Academic Collaboration</h3>
-        <p class="text-gray-500 leading-relaxed mb-8 text-sm">
-          Whether you have a question regarding international trade law, are seeking a research collaborator, 
-          or wish to discuss legal advisory services, I welcome your message.
-        </p>
-
-        <div class="space-y-5">
-          <div class="flex items-center gap-4 p-4 border-l-2 border-gold bg-white">
-            <i class="fa-solid fa-envelope text-gold text-lg w-6 text-center"></i>
-            <div>
-              <div class="text-xs text-gray-400 uppercase tracking-wider mb-0.5">Email</div>
-              <a href="mailto:lawyer.alirezamahdavi@gmail.com" class="text-navy font-medium text-sm hover:text-gold transition-colors">
-                lawyer.alirezamahdavi@gmail.com
-              </a>
-            </div>
-          </div>
-          <div class="flex items-center gap-4 p-4 border-l-2 border-gold bg-white">
-            <i class="fa-solid fa-phone text-gold text-lg w-6 text-center"></i>
-            <div>
-              <div class="text-xs text-gray-400 uppercase tracking-wider mb-0.5">Phone</div>
-              <a href="tel:+905338737916" class="text-navy font-medium text-sm hover:text-gold transition-colors">+905338737916</a>
-            </div>
-          </div>
-          <div class="flex items-center gap-4 p-4 border-l-2 border-gold bg-white">
-            <i class="fa-solid fa-location-dot text-gold text-lg w-6 text-center"></i>
-            <div>
-              <div class="text-xs text-gray-400 uppercase tracking-wider mb-0.5">Location</div>
-              <span class="text-navy font-medium text-sm">Cyprus | Nicosia</span>
-            </div>
-          </div>
-          <div class="flex items-center gap-4 p-4 border-l-2 border-gold bg-white">
-            <i class="fa-brands fa-researchgate text-gold text-lg w-6 text-center"></i>
-            <div>
-              <div class="text-xs text-gray-400 uppercase tracking-wider mb-0.5">ResearchGate</div>
-              <a href="https://www.researchgate.net" target="_blank" rel="noopener" class="text-navy font-medium text-sm hover:text-gold transition-colors">
-                View Academic Profile →
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Contact form -->
-      <div class="fade-up" style="transition-delay:0.2s;">
-        <div class="bg-navy rounded-sm p-8">
-          <h4 class="font-display text-white text-xl font-semibold mb-6">Send a Message</h4>
-          <div class="space-y-4">
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label class="text-gray-400 text-xs uppercase tracking-wider block mb-2">First Name</label>
-                <input type="text" placeholder="John" class="contact-input" />
-              </div>
-              <div>
-                <label class="text-gray-400 text-xs uppercase tracking-wider block mb-2">Last Name</label>
-                <input type="text" placeholder="Doe" class="contact-input" />
-              </div>
-            </div>
-            <div>
-              <label class="text-gray-400 text-xs uppercase tracking-wider block mb-2">Email Address</label>
-              <input type="email" placeholder="john@example.com" class="contact-input" />
-            </div>
-            <div>
-              <label class="text-gray-400 text-xs uppercase tracking-wider block mb-2">Subject</label>
-              <input type="text" placeholder="Legal Consultation / Research Collaboration" class="contact-input" />
-            </div>
-            <div>
-              <label class="text-gray-400 text-xs uppercase tracking-wider block mb-2">Message</label>
-              <textarea rows="4" placeholder="Your message here..." class="contact-input" style="resize:vertical;"></textarea>
-            </div>
-            <button
-              class="btn-gold w-full mt-2 flex items-center justify-center gap-2"
-              onclick="handleContactSubmit(this)"
-            >
-              <i class="fa-solid fa-paper-plane text-sm"></i>
-              Send Message
-            </button>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    <p class="ref-note">Contact details are available on request.</p>
   </div>
 </section>
 
+<section id="contact" class="section">
+  <div class="wrap two-col">
+    <div class="reveal">
+      <p class="kicker">Let's connect</p>
+      <h2>Get in touch</h2>
+      <p>I welcome messages about research collaboration, PhD supervision, legal-tech projects and legal advisory work.</p>
+      <ul class="contact-list">
+        <li><span>Email</span><a href="mailto:lawyer.alirezamahdavi@gmail.com">lawyer.alirezamahdavi@gmail.com</a></li>
+        <li><span>Phone</span><a href="tel:+905338737916">+90 533 873 7916</a></li>
+        <li><span>Location</span>Nicosia, Cyprus</li>
+        <li><span>ResearchGate</span><a href="https://www.researchgate.net/profile/Alireza-Mahdavishirkharkolaei" target="_blank" rel="noopener">Academic profile</a></li>
+        <li><span>GitHub</span><a href="https://github.com/AlirezaMahdavishirkharkolaei" target="_blank" rel="noopener">AlirezaMahdavishirkharkolaei</a></li>
+      </ul>
+    </div>
+    <form class="form reveal" id="contact-form" novalidate>
+      <div class="row">
+        <label>Name<input name="name" required autocomplete="name"></label>
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      </div>
+      <label>Subject<input name="subject" required></label>
+      <label>Message<textarea name="message" rows="5" required></textarea></label>
+      <button class="btn-gold" type="submit">Send message</button>
+      <p class="form-status" id="form-status" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
 
-<!-- ═══════════════════════════════════════════════
-     FOOTER
-═══════════════════════════════════════════════ -->
-<footer class="py-12">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-6 border-b border-white border-opacity-10 pb-8 mb-8">
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 flex items-center justify-center border border-gold rounded-sm">
-          <i class="fa-solid fa-scale-balanced text-gold text-sm"></i>
-        </div>
-        <div>
-          <div class="font-display text-white font-semibold text-base">Alireza Mahdavishirkharkolaei</div>
-          <div class="text-xs text-gold tracking-widest uppercase opacity-70">Legal Researcher</div>
-        </div>
-      </div>
-      <div class="flex gap-6">
-        <a href="#about"        class="text-gray-400 text-xs hover:text-gold transition-colors uppercase tracking-wider">About</a>
-        <a href="#education"    class="text-gray-400 text-xs hover:text-gold transition-colors uppercase tracking-wider">Education</a>
-        <a href="#publications" class="text-gray-400 text-xs hover:text-gold transition-colors uppercase tracking-wider">Publications</a>
-        <a href="#contact"      class="text-gray-400 text-xs hover:text-gold transition-colors uppercase tracking-wider">Contact</a>
-      </div>
-    </div>
-    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-gray-500 text-xs">
-        © 2026 Alireza Mahdavishirkharkolaei. All rights reserved.
-      </p>
-      <div class="flex items-center gap-3">
-        <a href="https://www.researchgate.net" target="_blank" rel="noopener"
-           class="w-8 h-8 border border-gray-700 rounded-sm flex items-center justify-center text-gray-500 hover:border-gold hover:text-gold transition-all">
-          <i class="fa-brands fa-researchgate text-xs"></i>
-        </a>
-        <a href="mailto:lawyer.alirezamahdavi@gmail.com"
-           class="w-8 h-8 border border-gray-700 rounded-sm flex items-center justify-center text-gray-500 hover:border-gold hover:text-gold transition-all">
-          <i class="fa-solid fa-envelope text-xs"></i>
-        </a>
-        <a href="tel:+905338737916"
-           class="w-8 h-8 border border-gray-700 rounded-sm flex items-center justify-center text-gray-500 hover:border-gold hover:text-gold transition-all">
-          <i class="fa-solid fa-phone text-xs"></i>
-        </a>
-      </div>
-    </div>
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year">2026</span> Alireza Mahdavishirkharkolaei</p>
+    <p><a href="#top">Back to top ↑</a></p>
   </div>
 </footer>
 
-
-<!-- ═══════════════════════════════════════════════
-     PUBLICATION MODAL
-═══════════════════════════════════════════════ -->
-<div id="modal-overlay" onclick="handleModalOverlayClick(event)">
-  <div id="modal-box">
-    <!-- Modal header -->
-    <div class="bg-navy px-8 py-6 flex items-start justify-between gap-4">
-      <div>
-        <div id="modal-type" class="text-xs text-gold uppercase tracking-widest font-semibold mb-2"></div>
-        <h3 id="modal-title" class="font-display text-white text-xl font-semibold leading-snug"></h3>
-      </div>
-      <button onclick="closeModal()" class="text-gray-400 hover:text-white transition-colors flex-shrink-0 mt-1 text-xl">
-        <i class="fa-solid fa-times"></i>
-      </button>
-    </div>
-    <!-- Modal body -->
-    <div class="px-8 py-7">
-      <div class="flex items-center gap-2 mb-5">
-        <i class="fa-solid fa-user text-gold text-xs"></i>
-        <span class="text-gray-500 text-sm">Alireza Mahdavishirkharkolaei</span>
-      </div>
-      <h4 class="text-navy font-semibold text-sm uppercase tracking-wider mb-3">Abstract / Summary</h4>
-      <p id="modal-summary" class="text-gray-600 leading-relaxed text-sm mb-6"></p>
-
-      <!-- Keywords placeholder -->
-      <div class="flex flex-wrap gap-2 mb-7">
-        <span id="modal-kw1" class="skill-pill text-xs"></span>
-        <span id="modal-kw2" class="skill-pill text-xs"></span>
-        <span id="modal-kw3" class="skill-pill text-xs"></span>
-      </div>
-
-      <div class="flex flex-col sm:flex-row gap-3">
-        <a id="modal-link" href="#" target="_blank" rel="noopener" class="btn-gold flex items-center justify-center gap-2">
-          <i class="fa-solid fa-external-link text-sm"></i>
-          Read Full Article
-        </a>
-        <button onclick="closeModal()" class="btn-outline-gold">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ═══════════════════════════════════════════════
-     JAVASCRIPT
-═══════════════════════════════════════════════ -->
-<script>
-  /* ── Publication data ── */
-  const publications = [
-    {
-      type: 'Journal Article',
-      title: 'From Fiscal to Legal Fragmentation: Coherence Challenges in Global Trade Governance',
-      summary: '[Please fill in the detailed abstract or summary of this article here. Describe the research question, methodology, key findings, and conclusions. This placeholder is ready for your content.]',
-      keywords: ['Tax Havens', 'Global Trade Governance', 'Legal Fragmentation'],
-      link: 'https://your-link-1.com'
-    },
-    {
-      type: 'Journal Article',
-      title: 'The Legal and Technological Implications of Tax Havens: Challenges to Corporate Transparency and Open Access to Fiscal Information',
-      summary: '[Please fill in the detailed abstract or summary of this article here. Describe the research question, methodology, key findings, and conclusions. This placeholder is ready for your content.]',
-      keywords: ['Corporate Transparency', 'Tax Havens', 'Fiscal Information'],
-      link: 'https://your-link-2.com'
-    },
-    {
-      type: 'LLM Thesis',
-      title: 'The Impact of Tax Havens on International Trade Law',
-      summary: '[Please fill in the abstract or summary of your Master\'s thesis here. Include the core argument, methodology used, key findings, and academic contributions of this research. This placeholder is ready for your content.]',
-      keywords: ['International Trade Law', 'Tax Havens', 'LLM Research'],
-      link: 'https://your-thesis-link.com'
-    }
-  ];
-
-  function openModal(index) {
-    const pub = publications[index];
-    document.getElementById('modal-type').textContent    = pub.type;
-    document.getElementById('modal-title').textContent   = pub.title;
-    document.getElementById('modal-summary').textContent = pub.summary;
-    document.getElementById('modal-kw1').textContent     = pub.keywords[0];
-    document.getElementById('modal-kw2').textContent     = pub.keywords[1];
-    document.getElementById('modal-kw3').textContent     = pub.keywords[2];
-    document.getElementById('modal-link').href           = pub.link;
-    document.getElementById('modal-overlay').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    document.getElementById('modal-overlay').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  function handleModalOverlayClick(e) {
-    if (e.target === document.getElementById('modal-overlay')) closeModal();
-  }
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeModal();
-  });
-
-  /* ── Navbar scroll ── */
-  window.addEventListener('scroll', function() {
-    const nav = document.getElementById('navbar');
-    nav.classList.toggle('scrolled', window.scrollY > 50);
-  });
-
-  /* ── Mobile menu ── */
-  document.getElementById('mobile-toggle').addEventListener('click', function() {
-    const menu = document.getElementById('mobile-menu');
-    const icon = document.getElementById('toggle-icon');
-    const isOpen = menu.classList.contains('open');
-    menu.classList.toggle('open');
-    icon.className = isOpen ? 'fa-solid fa-bars' : 'fa-solid fa-times';
-  });
-
-  function closeMobileMenu() {
-    document.getElementById('mobile-menu').classList.remove('open');
-    document.getElementById('toggle-icon').className = 'fa-solid fa-bars';
-  }
-
-  /* ── Intersection Observer for fade animations ── */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        /* Language bars */
-        const bars = entry.target.querySelectorAll('.lang-bar-fill');
-        bars.forEach(bar => {
-          bar.style.width = bar.dataset.width + '%';
-        });
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.fade-up, .fade-left').forEach(el => observer.observe(el));
-
-  /* Also observe skill section for lang bars */
-  document.querySelectorAll('.lang-bar-fill').forEach(bar => {
-    const section = bar.closest('section');
-    if (section) {
-      const secObs = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            bar.style.width = bar.dataset.width + '%';
-            secObs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.3 });
-      secObs.observe(section);
-    }
-  });
-
-  /* ── Contact form handler ── */
-  function handleContactSubmit(btn) {
-    const original = btn.innerHTML;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-sm"></i> Sending...';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.innerHTML = '<i class="fa-solid fa-check text-sm"></i> Message Sent!';
-      btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-      setTimeout(() => {
-        btn.innerHTML = original;
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 3000);
-    }, 1500);
-  }
-</script>
-
-<style>
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(25px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .bg-navy-light { background: #002a54; }
-</style>
-
-<!-- User only needs to replace photo URL and fill article summaries + real links -->
+<script src="assets/site.js" defer></script>
 </body>
 </html>
